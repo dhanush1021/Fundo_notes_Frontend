@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="inner-container">
+        <div class="header">
+            <span>Create</span>
+            <span>An</span>
+            <span>Account</span>
+        </div>
+        <div class="holes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="content">
+            <div class="name">
+                <form class="form" [formGroup]="reactiveform" >
+                    <mat-form-field appearance="outline">
+                        <mat-label>FirstName</mat-label>
+                        <input matInput formControlName="name">
+                        <mat-error *ngIf="name?.errors?.['required']">You must enter a value</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>LastName</mat-label>
+                        <input matInput formControlName="name1">
+                        <mat-error *ngIf="name1?.errors?.['required']">You must enter a value</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email">
+                        <mat-error *ngIf="email?.errors?.['required'] || email?.errors?.['email']">
+                            <span *ngIf="email?.errors?.['required']">You must enter an email</span>
+                            <span *ngIf="email?.errors?.['email'] && !email?.errors?.['required']">Please enter a valid email address</span>
+                          </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide? 'password' : 'text'" formControlName="password" (keyup)="onKey($event)">
+                        <mat-error *ngIf="password?.errors?.['required'] || password?.errors?.['minlength']||password?.hasError('hasCapitalcase')||password?.hasError('hasLowercase')||password?.hasError('hasdigit')||password?.hasError('hasspecial')">
+                            <span *ngIf="password?.errors?.['required']">You must enter an password</span>
+                            <span *ngIf="password?.errors?.['minlength']">Password must contain atleast 4 characters</span>
+                            <span *ngIf="password?.hasError('hasCapitalcase') && !password?.errors?.['minlength']">Password must contain atleast One Capital Letter</span>
+                            <span *ngIf="!password?.hasError('hasCapitalcase') && !password?.errors?.['minlength'] && password?.hasError('hasLowercase')">Password must contain atleast One Lower Letter</span>
+                            <span *ngIf="!password?.hasError('hasCapitalcase') && !password?.errors?.['minlength'] && !password?.hasError('hasLowercase') && password?.hasError('hasdigit')">Password must contain atleast One digit Letter</span>
+                            <span *ngIf="!password?.hasError('hasCapitalcase') && !password?.errors?.['minlength'] && !password?.hasError('hasLowercase') && !password?.hasError('hasdigit') && password?.hasError('hasspecial')">Password must contain atleast One special character</span>
+                          </mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm-Password</mat-label>
+                        <input matInput [type]="hide? 'password' : 'text'" formControlName="confirmPassword">
+                        <mat-error *ngIf="confirmpassword?.errors?.['required'] || confirmpassword?.errors?.['passwordmismatched']">
+                            <span *ngIf="confirmpassword?.errors?.['required']">You must enter a password</span>
+                            <span *ngIf="confirmpassword?.hasError('passwordmismatched') && !confirmpassword?.errors?.['required']">Passwords do not match</span>
+                        </mat-error>
+                    </mat-form-field>
+                    <span class="showpass">
+                        <mat-checkbox color="primary" (change)="hide = !hide">Show Password</mat-checkbox>
+                    </span>
+                </form>
+            </div>
+            <button mat-raised-button color="primary" (click)="RegSubmit()">Create Account</button>
+        </div>
+    </div>
+</div>

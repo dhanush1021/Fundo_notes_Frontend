@@ -1,0 +1,17 @@
+<div class="outer" (mouseenter)="hovering(true)" (mouseleave)="hovering(false)">
+    <button class="buttoning" [ngStyle]="{'background-color':bool ? '':'transparent','transition':'background-color 300ms ease-in-out'}" (click)="changecolor()">
+        <span class="material-symbols-outlined md-light" [ngStyle]="{'color':bool ? '':'transparent','transition': 'color 300ms ease-in-out'}">check_small</span>
+    </button>
+    <div [ngClass]="bool ? 'container':'container1'" [@smoothTransition]="bool ? 'container':'container1'" [ngStyle]="{'border': color ? '0.3vh solid rgb(232, 223, 223)':'0.3vh solid #5d5c5c'}">
+        <div class="inputing" (click)="update_note()">
+            <textarea class="input" readonly #textareaRef1 (input)="adjustTextareaHeight()" [value]="note.title"></textarea>
+            <button mat-icon-button class="favorite-icon" *ngIf="bool">
+                <span class="material-symbols-outlined md-light1">keep</span>
+            </button>
+        </div>
+        <textarea class="textarea" readonly #textareaRef (input)="adjustTextareaHeight()" [value]="note.description" (click)="update_note()"></textarea>
+        <div class="icons">
+            <app-icons *ngIf="bool"[notesObject]="note"></app-icons>
+        </div>
+    </div>
+</div>

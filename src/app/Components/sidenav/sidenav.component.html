@@ -1,0 +1,10 @@
+<div class="container">
+    <div [ngClass]="sidenavbar ? 'sidenav' : 'no-sidenav'" (mouseenter)="sidenavhover(true)" (mouseleave)="sidenavhover(false)" [ngStyle]="{'transition': 'width 0.3s','z-index': this.sidenavbarhover ? '9999' : 'auto'}">
+        <div class="des" *ngFor="let item of combinedItems;let i = index;" (click)="selected(i)" [ngStyle]="{'background-color': backgroundStates[i] ? '#41331c' : 'transparent','border-radius' : this.sidenavbar ? '':'50%'}">
+            <div class="iconsandname" (click)="condition(i)">
+                <span class="material-symbols-outlined md-light">{{combinedIcons[i]}}</span>
+                <span class="iconname" *ngIf="sidenavbar">{{item}}</span>
+            </div>
+        </div>
+    </div>
+</div>

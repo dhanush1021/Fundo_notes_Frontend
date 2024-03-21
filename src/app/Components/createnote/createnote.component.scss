@@ -1,0 +1,213 @@
+.mian {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.takenotes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    height: 8.5vh;
+    border-radius: 8px;
+    box-shadow: black 1px 1px 5px ;
+    border: solid 1px #5d5c5c;
+    padding: 1px 16px;
+    box-sizing: border-box;
+}
+
+.notebar{
+    color: rgb(232, 223, 223);
+    height: 100%;
+    width: 35vw;
+    background-color: transparent;
+    font-size: 3vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.notebar::placeholder{
+    color: rgb(232, 223, 223);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.takenotes div{
+    display: flex;
+    gap: 1vh;
+}
+.takenotes div button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.75vw;
+    height: 3.75vw;
+}
+.takenotes div button:hover{
+    background-color: #333;
+}
+.takenotes div button:hover .material-symbols-outlined.md-light{
+    color: white;
+}
+
+form{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.createnotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: black 1px 1px 5px ;
+    border: solid 1px #5d5c5c;
+}
+.titlebar{
+    width: 100%;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.titlebar button:hover img{
+    opacity: 0.87;
+}
+.titlebar button:hover{
+    background-color: #333;
+}
+.titlebar button{
+    width: 3.5vw;
+    height: 3.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+.title{
+    font-size: 1rem;
+    font-weight: 500;
+    width: 80%;
+    min-height: auto;
+    background-color: transparent;
+    resize: none;
+    padding-top: 2vh;
+}
+
+input, textarea{
+    border: none;
+    padding: 0px;
+    color: rgb(232, 223, 223);
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+}
+input::placeholder,.createnotes textarea::placeholder{
+    color: rgb(232, 223, 223);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+input, textarea:focus{
+    outline: none;
+}
+
+.desc {
+    font-size: 1rem;
+    width: 100%;
+    padding: 5px 16px;
+    box-sizing: border-box;
+    resize: none;
+    overflow-y: hidden;
+    font-family: inherit; 
+    font-size: inherit; 
+    font-weight: 400;
+    background-color: transparent;    
+}
+
+
+.notesicon{
+    width: 100%;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+app-icons{
+    width:70%
+}
+
+.close{
+    color: rgb(232, 223, 223);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    letter-spacing: 0.08vh;
+    width: 7vw;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vh;
+}
+
+.close:hover{
+    background-color: #333;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+.material-symbols-outlined.md-light { 
+    color: #7b7a7a;
+    font-size: 5vh;
+}
+.notesicon .lefticons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+.notesicon .lefticons button:hover{
+    background-color: #333;
+}
+.notesicon .lefticons button:hover .material-symbols-outlined.md-light1{
+    color: white;
+}
+.notesicon .lefticons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+.material-symbols-outlined.md-light1 { 
+    color: #7b7a7a;
+    font-size: 3.5vh;
+}
+.desc::-webkit-scrollbar{
+    width: 2vh;
+}
+.desc::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, .3);
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+.desc::-webkit-scrollbar-track{
+    background-color: #333;
+    height: 20vh;
+}
+.desc::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(209, 189, 189);
+}
