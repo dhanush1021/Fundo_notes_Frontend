@@ -1,0 +1,33 @@
+<div class="main">
+    <button mat-icon-button class="reminder-icon  " aria-label="Example icon-button with heart icon">
+        <span class="material-symbols-outlined md-light">add_alert</span>
+    </button>
+    <button mat-icon-button class="collaborator-icon  " aria-label="Example icon-button with heart icon">
+        <span class="material-symbols-outlined md-light">person_add</span>
+    </button>
+    <button mat-icon-button class="color-icon  " aria-label="Example icon-button with heart icon" [matMenuTriggerFor]="paletteMenu">
+        <span class="material-symbols-outlined md-light">palette</span>
+    </button>
+    <button mat-icon-button class="image-icon  " aria-label="Example icon-button with heart icon">
+        <span class="material-symbols-outlined md-light">image</span>
+    </button>
+    <button mat-icon-button class="archive-icon  " aria-label="Example icon-button with heart icon" (click)="archive()">
+        <span class="material-symbols-outlined md-light" >archive</span>
+    </button>
+    <button mat-icon-button class="option-icon  " aria-label="Example icon-button with heart icon" [matMenuTriggerFor]="moreMenu" #moreMenuTrigger="matMenuTrigger">
+        <span class="material-symbols-outlined md-light">more_vert</span>
+    </button>
+    <mat-menu #moreMenu="matMenu" (backdropClick)="closeMenu(moreMenuTrigger)">
+        <button mat-menu-item (click)="onDelete()">Delete note</button>
+        <button mat-menu-item>Add label</button>
+        <button mat-menu-item>Add drawing</button>
+        <button mat-menu-item>Show checkboxes</button>
+    </mat-menu>  
+    <mat-menu #paletteMenu="matMenu" xPosition="before">
+        <div class="changecolor">
+        <div *ngFor = "let colors of colorsArray">
+            <button class="colorIcon " [style.background]="colors.code" (click)="selectcolor(colors)"></button>
+        </div>
+    </div> 
+    </mat-menu>
+</div>
