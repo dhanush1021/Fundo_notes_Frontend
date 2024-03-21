@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #b3b3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-container{
+    width: 70vw;
+    height: 90vh;
+    background-color: palegoldenrod;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: row;
+    border: 0.5vh solid black;
+}
+.header{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    letter-spacing: 1vh;
+    font-size: 10vh;
+    padding-left: 8vh;
+    padding-top: 20vh;
+    width: 30vw;
+    font-family: "Truculenta", sans-serif;
+}
+.content button{
+    font-family: "Dosis", sans-serif;
+}
+.header span{
+    margin-top: 5vh;
+}
+.holes{
+    display: grid;
+    gap: 1vh;
+    padding-top: 0.8vh;
+    margin-left: 2vh;
+    width: 5vw;
+}
+.holes div{
+    width: 3vh;
+    height: 3vh;
+    border: 0.5vh solid black;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+.name{
+    display: flex;
+}
+.form{
+    display: grid;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+    gap: 3.5vh;
+    grid-template-columns: 30vw;
+}
