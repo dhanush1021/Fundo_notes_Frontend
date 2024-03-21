@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container{
+    width: 9vw;
+    height: 86vh;
+    .sidenav{
+        margin-top: 1.5vh;
+        width: 22vw;
+        height: 84.7vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        div{
+            height: 8vh;
+            width: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-top-right-radius: 27px;
+            border-bottom-right-radius: 27px;
+            div{
+                width: auto;
+                padding-left: 4vh;
+                height: auto;
+                border: 0vh;
+                display: flex;
+                gap: 2.2vw;
+                .iconname{
+                    font-family: "Roboto", sans-serif;
+                    color: rgb(232, 223, 223);
+                    font-size: 2.5vh;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+.sidenav::-webkit-scrollbar{
+    width: 2vh;
+}
+.sidenav::-webkit-scrollbar-thumb{
+    background-color: #5d5c5c;
+}
+.sidenav::-webkit-scrollbar-track{
+    background-color: transparent
+}
+.sidenav::-webkit-scrollbar-track:hover{
+    background-color: #333;
+}
+.sidenav::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(232, 223, 223);
+}
+.no-sidenav{
+   margin-top: 1.5vh;
+   width: 8vh;
+   height: 84.7vh;
+   overflow: hidden;
+   div{
+    height: 8vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+    }
+    }
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+.material-symbols-outlined.md-light{
+    color: rgb(232, 223, 223);
+    font-size: 5vh;
+}
+.des{
+    cursor: pointer;
+}

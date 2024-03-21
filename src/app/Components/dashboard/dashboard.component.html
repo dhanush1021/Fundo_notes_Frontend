@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="toolbar">
+        <div class="left">
+            <button mat-button (click)="onsidenav()">
+                <span class="material-symbols-outlined md-light1">menu</span>
+            </button>
+            <div class="heading">
+                <img src="https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png" alt="FundoNotes">
+                <span class="keep">Keep</span>
+            </div>
+        </div>
+        <div class="center">
+            <div class="search" [ngStyle]="{'background-color': change ? 'rgb(232, 223, 223)' : '#5d5c5c'}">
+                <button [ngClass]="{buttonstyles:true}">
+                    <span class="material-symbols-outlined md-light1" [ngStyle]="{'color': change ? '#7b7a7a':'rgb(232, 223, 223)'}">search</span>
+                </button>
+            </div>
+            <input type="search" placeholder="Search" (focus)="onchange()" (blur)="onchange()">
+        </div>
+        <div class="right">
+            <div class="rightleft">
+                <button>
+                    <span class="material-symbols-outlined md-light">refresh</span>
+                </button>
+                <button>
+                    <span class="material-symbols-outlined md-light">view_agenda</span>
+                </button>
+                <button>
+                    <span class="material-symbols-outlined md-light">settings</span>
+                </button>
+            </div>
+            <div class="rightright">
+                <button>
+                    <span class="material-symbols-outlined md-light1">apps</span>
+                </button>
+                <button>
+                    <span class="material-symbols-outlined md-light">person</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="lowerhalf">
+        <app-sidenav [ngStyle]="{'width':sidenavbar ? '22vw':'9vh','z-index':1,'margin-left':sidenavbar ? '0vh':'2vh'}"></app-sidenav>
+        <div class="notes" [ngStyle]="{'width':sidenavbar ? '78vw':'96vw'}" *ngIf="isnotes">
+            <app-createnote></app-createnote>
+            <div class="notespo">
+                <div class="note" *ngFor="let note of notesarray">
+                    <app-note [note]="note"></app-note>
+                </div>
+            </div>
+        </div>
+        <div class="notes" [ngStyle]="{'width':sidenavbar ? '78vw':'96vw'}" *ngIf="isarchive">
+            <div class="notespo">
+                <div class="note" *ngFor="let note of notesarray">
+                    <app-note [note]="note"></app-note>
+                </div>
+            </div>
+        </div><div class="notes" [ngStyle]="{'width':sidenavbar ? '78vw':'96vw'}" *ngIf="istrash">
+            <div class="notespo">
+                <div class="note" *ngFor="let note of notesarray">
+                    <app-note [note]="note"></app-note>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
