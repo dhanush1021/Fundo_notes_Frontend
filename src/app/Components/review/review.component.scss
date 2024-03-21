@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+.outer-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #b8b6ce;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6vh;
+}
+.outer-container div{
+    width: 23vw;
+    height: 90vh;  
+    background-color: rgb(8, 0, 62);
+    border-radius: 7vh;  
+}
+.box1 div{
+    width: 11.5vw;
+    height: 90vh;
+}
+.box1{
+    display: flex;
+}
+.box1 .inner-box1{
+    background-color: rgb(8, 0, 62);
+    border-top-left-radius: 7vh;
+    border-bottom-left-radius: 7vh;
+}
+.box1 .inner-box2{
+    background-color: white;
+    border-bottom-right-radius: 7vh;
+    border-top-right-radius: 7vh;
+}
+.box1 .smallsquare1{
+    position: absolute;
+    background-color: white;
+    height: 45vh;
+    width: 23vw;
+    top: 5vh;
+    left: 12.79vw;
+    border-top-left-radius: 6vh;
+    border-top-right-radius: 6vh;
+    border-bottom-left-radius: 6vh;
+}
+.box1 .smallsquare2{
+    position: absolute;
+    background-color: rgb(8, 0, 62);
+    height: 45vh;
+    width: 23vw;
+    top: 50vh;
+    left: 12.79vw;
+    border-bottom-left-radius: 6vh;
+    border-bottom-right-radius: 6vh;
+    border-top-right-radius: 6vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    font-family: "Poppins", sans-serif;
+}
+.smallsquare2 div{
+    width: auto;
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.smallsquare2 .firstdiv{
+    width: auto;
+    height: 7vh;
+    font-weight: 600;
+}
+.smallsquare2 .seconddiv{
+    font-size: 2vh;
+}
+.smallsquare2 .button1{
+    background-color: white;
+    width: 18vw;
+    height: 6vh;
+    border-radius: 1vh;
+    border: 0vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.smallsquare2 .button2{
+    background-color: rgb(8, 0, 62);
+    width: 18vw;
+    height: 6vh;
+    border-radius: 1vh;
+    border: 0vh;
+    color: white;
+    border: 0.5vh solid white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.box2 .upperbox{
+    background-color: rgb(8, 0, 62);
+    width: auto;
+    height: 30vh;
+}
+.box2 .lowerbox{
+    background-color: white;
+    width: auto;
+    height: 60.1vh;
+}
+.upperbox .arrowbutton{
+    width: 20vw;
+    height: 6vh;
+}
+.upperbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.arrowbutton button{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    border: 0vh;
+    color: rgb(8, 0, 62);
+}
+.upperbox .allspans{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 10vh;
+    font-family: "Poppins", sans-serif;   
+}
+.allspans .back{
+    font-weight: 600;
+    font-size: 4vh;
+}
+.allspans .sign{
+    font-size: 2vh;
+}
+.box2 .lowerbox{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    font-family: "Poppins", sans-serif; 
+}
+.lowerbox div{
+    background-color: transparent;
+    width: auto;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.email input{
+    border-radius: 1vh;
+    border: 0vh;
+    width: 20vw;
+    height: 10vh;
+    background-color: rgb(227, 225, 236);
+}
+.password input{
+    border-radius: 1vh;
+    border: 0vh;
+    width: 20vw;
+    height: 10vh;
+    background-color: rgb(227, 225, 236);
+}
+.lowerbox .forget{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4vh;
+    font-size: 2vh;
+    justify-content: center;
+    height: 3vh;
+}
+.forget button{
+    font-family: "Poppins", sans-serif;
+    font-size: 2vh;
+    background-color: white;
+    color: rgb(193, 185, 227);
+    border: 0vh;
+}
+.forget .inputting{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.signin{
+    width: 18vw;
+    height: 6vh;
+    border: 0vh;
+    background-color: rgb(8, 0, 62);
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+.lowerbox .newuser,.email span,.password span{
+    font-size: 2vh;
+}
+.lowerbox .signin2{
+    font-weight: 600;
+    position: relative;
+    right: 7.4vw;
+    font-size: 3.5vh;
+}
+.lowerbox .input2{
+    display: flex;
+    flex-direction: row;
+    width: 18vw;
+    height: 6vh;
+    position: relative;
+    right: 2vh;
+    font-size: 2vh;
+    word-spacing: -0.2vh;
+}
+.input2 .spans{
+    display: flex;
+    flex-direction: column;
+    gap: -5vh;
+    height: 6vh;
+    width: 17vw;
+}
