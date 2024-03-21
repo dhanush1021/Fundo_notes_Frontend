@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="contain">
+        <div class="box1">
+            <p class="sign">Sign In</p>
+            <p class="con">
+                <span>To</span>
+                <span>Continue</span>
+                <span>To</span>
+                <span>FundoNotes</span>
+            </p>
+        </div>
+        <div class="holes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box2">
+            <form class="form" [formGroup]="ReactiveForm">
+                <div class="contain1">
+                    <mat-form-field class="email" appearance="outline">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput formControlName="email">
+                        <mat-error *ngIf="email?.errors?.['required'] || email?.errors?.['email']">
+                            <span *ngIf="email?.errors?.['required']">You must enter an email</span>
+                            <span *ngIf="email?.errors?.['email']">Please enter a valid email address</span>
+                          </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="pass" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide? 'password' : 'text'" formControlName="password">
+                        <mat-error *ngIf="password?.errors?.['required'] || password?.errors?.['minlength']">
+                            <span *ngIf="password?.errors?.['required']">You must enter a password</span>
+                            <span *ngIf="password?.errors?.['minlength']">Please enter a valid password</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <span class="showpass">
+                    <mat-checkbox color="primary" (change)="hide = !hide">Show Password</mat-checkbox>
+                </span>
+                <div class="buttons">
+                    <button class="forget" mat-button color="primary">Forget Password?</button>
+                    <button class="login" mat-raised-button color="primary" (click)="LoginSubmit()">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="buttons-2">
+            <button mat-button>Help</button>
+            <button mat-button>Privacy</button>
+            <button mat-button>Terms</button>
+        </div>
+</div>

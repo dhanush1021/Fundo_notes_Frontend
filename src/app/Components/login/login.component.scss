@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: #b0b0b0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.contain{
+    width: 60%;
+    height: 80%;
+    background: palegoldenrod;
+    border-radius: 4vh;
+    display: flex;
+    flex-direction: row;
+    border: 0.5vh solid black;
+}
+.box1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    padding-left: 7vh;
+}
+.con{
+    margin-top: 3vh;
+    font-family: "Truculenta", sans-serif;
+    letter-spacing: 1vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 6vh;
+}
+.con span{
+    margin-top: 4vh;
+}
+.sign{
+    font-family: "Truculenta", sans-serif;
+    letter-spacing: 1vh;
+    font-size: 12vh;
+}
+.box2{
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+.contain1{
+    display: flex;
+    flex-direction: column;
+}
+.email,.pass{
+    width: 55vh;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 14vh;
+    margin-top: 5vh;
+}
+button{
+    font-family: "Dosis", sans-serif;
+    font-size: 3vh;
+}
+.showpass{
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+    align-items: center;
+    width: 58vh;
+    height: 4vh;
+}
+.buttons-2{
+    display: grid;
+    grid-template-columns: 12vh 12vh 12vh;
+    gap: 5vh;
+    margin-left: 83vh;
+    margin-top: 0.5vh;
+}
+.buttons-2 button{
+    border-radius: 50%;
+}
+.holes{
+    display: grid;
+    gap: 1vh;
+    padding-top: 0.8vh;
+    margin-left: -12vh;
+    width: 5vw;
+}
+.holes div{
+    width: 3vh;
+    height: 3vh;
+    border: 0.5vh solid black;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+}
+.form{
+    display: grid;
+    grid-template-columns: auto;
+}
